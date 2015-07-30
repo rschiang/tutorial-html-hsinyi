@@ -44,6 +44,7 @@
         }
 
         nav li {
+            color: white;
             display: inline-block;
             list-style: none;
         }
@@ -53,8 +54,36 @@
             text-decoration: none;
         }
 
+        nav li::after {
+            content: ' / ';
+        }
+
+        nav li:last-child::after {
+            content: '';
+        }
+
         nav a:hover {
             color: #333;
+        }
+
+        .content article {
+            width: 70%;
+            float: left;
+        }
+
+        .content aside {
+            width: 30%;
+            float: right;
+        }
+
+        .content::after {
+            content: ' ';
+            clear: both;
+            display: block;
+        }
+
+        img {
+            max-width: 100%;
         }
 
     </style>
@@ -73,8 +102,9 @@
             <li><a href="#">摸蜆洗褲</a></li>
         </ul>
     </nav>
-    <div class="row">
-        <article class="row">
+    <div class="row content">
+        <article>
+            <img src="avatar.jpg">
             <h1>堅持101分，李心毅贏得郭台銘鞠躬</h1>
             <blockquote>一百年前，8國聯軍攻陷北京，自此中國門戶洞開，歷史改寫。百年後，來自美、英、法、德、荷、瑞、星、日、澳等國外資，進逼台灣金融、有線電視、電信、基礎建設、不動產、傳統企業、高科技公司。在這場資金、人才、技術的競爭中，為什麼，李心毅仍然會是贏家？</blockquote>
             <p>作者：胡釵維</p>
