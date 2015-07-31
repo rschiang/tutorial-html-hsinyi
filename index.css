@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: auto;
+    width: 100%;
+    max-width: 70em;
+    padding: 0 1em;
+}
+
+.full-row .row {
+    padding: 0;
+}
+
+body > header.row {
+    padding-top: 3em;
+}
+
+body > header h1 {
+    display: inline-block;
+    background: #d60c18;
+    color: white;
+    text-align: center;
+    font-family: 'HanWangShinSuMedium', '微軟正黑體', cursive;
+    font-size: 3em;
+    margin: 0;
+    padding: 0 .25em;
+}
+
+header h1 small {
+    font-size: 1.2rem;
+}
+
+nav {
+    background: #777;
+    padding: 0.5em 0;
+}
+
+nav li {
+    color: white;
+    display: inline-block;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li::after {
+    content: ' / ';
+}
+
+nav li:last-child::after {
+    content: '';
+}
+
+nav a:hover {
+    color: #333;
+}
+
+.content::after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+
+.content article p {
+    text-indent: 2em;
+    line-height: 1.67;
+}
+
+.content article blockquote {
+    font-family: 'HanWangFangSongMedium', serif;
+}
+
+.content article h1 + blockquote {
+    color: #555;
+}
+
+img {
+    max-width: 100%;
+    border: 1px #f0f0f0 solid;
+    padding: 6px;
+}
+
+.content article img:first-child {
+    margin-top: 1em;
+}
+
+.content aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content aside li {
+    padding-bottom: 1em;
+}
+
+footer {
+    background: #777;
+    color: white;
+    min-height: 10em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+footer .row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media only screen and (min-width: 50em) {
+    .content article {
+        width: 70%;
+        float: left;
+    }
+
+    .content aside {
+        width: 30%;
+        float: right;
+        padding: 0 1em;
+    }
+}
+
+@media only screen and (min-width: 70em) {
+    .row {
+        padding: 0;
+    }
+}
