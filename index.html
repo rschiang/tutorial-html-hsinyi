@@ -4,6 +4,10 @@
     <!-- <meta http-equiv="refresh" content="5"> -->
     <title>人物專訪 - 李心毅</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -13,13 +17,14 @@
             margin: auto;
             width: 100%;
             max-width: 70em;
+            padding: 0 1em;
         }
 
         .full-row .row {
             padding: 0;
         }
 
-        body > header {
+        body > header.row {
             padding-top: 3em;
         }
 
@@ -66,26 +71,69 @@
             color: #333;
         }
 
-        .content article {
-            width: 70%;
-            float: left;
-        }
-
-        .content aside {
-            width: 30%;
-            float: right;
-        }
-
         .content::after {
             content: ' ';
             clear: both;
             display: block;
         }
 
+        .content article p {
+            text-indent: 2em;
+            line-height: 1.67;
+        }
+
+        .content article blockquote {
+            font-family: 'HanWangFangSongMedium', serif;
+        }
+
+        .content article h1 + blockquote {
+            color: #555;
+        }
+
         img {
             max-width: 100%;
         }
 
+        .content aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content aside li {
+            padding-bottom: 1em;
+        }
+
+        footer {
+            background: #777;
+            color: white;
+            min-height: 10em;
+            margin-top: 5em;
+            text-align: center;
+        }
+
+        footer .row {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        @media only screen and (min-width: 50em) {
+            .content article {
+                width: 70%;
+                float: left;
+            }
+
+            .content aside {
+                width: 30%;
+                float: right;
+                padding: 0 1em;
+            }
+        }
+
+        @media only screen and (min-width: 70em) {
+            .row {
+                padding: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -135,5 +183,10 @@
             </ul>
         </aside>
     </div>
+    <footer>
+        <div class="row">
+            2015 遠蜆雜誌。創用 CC 版權所有，歡迎善男信女助印。
+        </div>
+    </footer>
 </body>
 </html>
